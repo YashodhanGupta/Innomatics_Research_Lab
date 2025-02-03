@@ -1,0 +1,237 @@
+.Header {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between; /* Left and right alignment */
+    align-items: center;
+    width: 100vw; /* Full width */
+    position: fixed; /* Keeps header fixed at the top */
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Slight transparency for styling */
+    padding: 15px 20px;
+    color: white;
+    z-index: 1000; /* Ensures the header stays on top */
+}
+
+/* Styles the "Coffee Shop" text */
+.Header a {
+    font-weight: bold;
+    font-size: 24px;
+    color:antiquewhite;
+    text-decoration: none;
+}
+
+/* Styles navigation links */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Adds spacing between links */
+    margin-right: 50px; 
+}
+
+/* Ensures the Home section covers the full width */
+.Home {
+    background-image: url("./coffee.jpg");
+    width: 100vw; /* Full width */
+    height: 200px; /* Adjust height as needed */
+    color: antiquewhite;
+    font-size: 40px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 80px 20px; /* Added top padding to avoid overlap with fixed header */
+}
+
+/* Removes default margins and padding */
+ html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+/* Ensures the Menu section is visible below the fixed header */
+.menu {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    padding-top: 30px; /* Adds space so the section isn't hidden behind the fixed header */
+}
+
+/* Container to hold all the cards */
+.card-container {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    align-items: center; /* Align cards vertically if needed */
+    gap: 10px; /* Adjust the gap between cards */
+    padding: 20px;
+    width: 100%; /* Ensure container takes full width */
+}
+
+/* Card Styling */
+.card {
+    width: 20%;  /* Adjust width to ensure 3 cards fit */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    
+}
+
+/* .card:hover {
+    transform: translateY(-10px); 
+} */
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.card-content button {
+    padding: 10px 20px;
+    background-color: #FF6347;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+
+
+/* About Section Styling */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin-top: 40px;
+    text-align: center; /* Center the content inside */
+    gap: 20px;
+    background-color: #ccc;
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    max-width: 500px; /* Limit the width of the image */
+}
+/* Contact Section Styling */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    margin-top: 40px;
+    background-color: #f7f7f7;
+}
+
+/* Contact Form Container */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Labels */
+.contact-form label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Fields */
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+/* Textarea for Message */
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Send Message Button */
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #FF4500;
+}
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    /* position: fixed; */
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+/* Footer Text */
+.footer p {
+    margin: 0;
+}
+
