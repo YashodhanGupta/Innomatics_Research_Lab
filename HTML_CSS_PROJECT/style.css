@@ -67,6 +67,7 @@ div span {
     font-weight: bold;
 }
 .header_inno button{
+    
     width: 120px;
     height: 40px;
     margin-top: 10px;
@@ -411,4 +412,18 @@ div span {
     padding:5px 5px;
   }
   
+  .payment {
+    display: flex;
+    
+     /* Adds space between the columns */
+  }
+  .payment .upi{
+    margin-left: 20%;
+    margin-right: 10%;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
   
