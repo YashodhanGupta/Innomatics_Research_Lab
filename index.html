@@ -1,0 +1,127 @@
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <style>
+      
+        /* Smooth scrolling effect */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Ensuring the menu section doesn't get hidden under the fixed header */
+        .menu {
+            margin-top: 60px; /* Adjust based on the height of your fixed header */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Header">
+        <a href="#Home">Yasho Brews</a> <!-- Left-aligned -->
+
+        <!-- Right-aligned links wrapped in a div -->
+        <div class="nav-links">
+            <a href="#Menu" id="menu">Menu</a> <!-- Link to Menu section -->
+            <!-- Link to Our Menu section -->
+            <a href="#About" id="about">About Us</a>
+            <a href="#Contact" id="contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="Home" id="Home">
+        <p style="filter: blur(0.8px);">Welcome to Yasho Brews</p>
+        <p style="font-size: 20px;">Your daily dose of coffee</p>
+        <a href="#Menu"><button style="background-color: rgb(216, 216, 23); font-size: 20px; border-radius: 10px;">View Menu</button></a>
+    </div>
+
+    <!-- Add an id to the menu section for navigation -->
+    <div class="menu" id="Menu"> <!-- ID added for navigation -->
+        <p>Our Menu</p>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://plus.unsplash.com/premium_photo-1673459683873-a8a47e1a5ab9?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FmZSUyMGxhdHRlfGVufDB8fDB8fHww" alt="Coffee Lattee" class="card-img">
+                <div class="card-content">
+                    <h3>Coffee Lattee</h3>
+                    <p>Enjoy a hot cup of freshly brewed coffee with your favorite flavor!</p>
+                    <button>$20</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FwcHVjY2lub3xlbnwwfHwwfHx8MA%3D%3D" alt="Cappuccino" class="card-img">
+                <div class="card-content">
+                    <h3>Cappuccino</h3>
+                    <p>A delightful mix of espresso, milk, and foam.</p>
+                    <button>$15</button>
+                </div>
+            </div>
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1592415486689-125cbbfcbee2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHNhbmR3aWNofGVufDB8fDB8fHww" alt="Sandwiches" class="card-img">
+                <div class="card-content">
+                    <h3>Sandwiches</h3>
+                    <p>A delightful mix of fresh bread, savory fillings, and gourmet flavors.</p>
+                    <button>$30</button>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img src="https://media.istockphoto.com/id/864607392/photo/image-of-a-glass-of-tea-in-street-market.jpg?s=612x612&w=0&k=20&c=lCTzJiUt1c7ETaCQl9UFSiQogOpHtPzh4XpcClzIgGM=" alt="Sandwiches" class="card-img">
+                <div class="card-content">
+                    <h3>Tea</h3>
+                    <p>Enjoy a warm cup of freshly brewed tea with your favorite blend!</p>
+                    <button>$5</button>
+                </div>
+                
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <!-- About Us Section -->
+    <div class="about" id="About">
+       
+        <div class="about-content">
+            
+            <p style="text-align: center; font-size: 30px; margin-top: 10px;">About Us</p>
+            <p>Welcome to our cozy Coffee Shop, where every sip is a journey to relaxation! We specialize in serving the finest brewed coffee made from the best beans sourced from around the world. Whether you’re looking for a quick morning pick-me-up or a peaceful place to spend the afternoon, we provide a welcoming atmosphere for all coffee lovers.</p>
+            <p>Our menu features a variety of coffee options, including espresso, lattes, cappuccinos, and iced beverages. We also offer a selection of freshly baked goods, sandwiches, and snacks to complement your drink. We take pride in our attention to detail, ensuring that every cup of coffee is brewed to perfection.</p>
+            <p>At our Coffee Shop, we believe in community. We strive to create a space where people can come together, relax, and enjoy great conversations over a warm cup of coffee. Whether you’re a regular customer or a first-time visitor, we aim to make every experience unforgettable. Join us and discover the true art of coffee!</p>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1528830639624-fc16697bb8e7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y2FmZSUyMGxhdHRlfGVufDB8fDB8fHww" alt="Coffee Shop Interior" />
+        </div>
+    </div>
+    <!-- Contact Section -->
+<div class="contact" id="Contact">
+    <p style="font-size: 30px; font-weight: bold; text-align: center;">Contact Us</p>
+    <p style="text-align: center; font-size: 18px;">We'd love to hear from you. Please fill out the form below to get in touch!</p>
+
+    <div class="contact-form">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p>© 2025 WhyG Cafe. All Rights Reserved.</p>
+</div>
+
+</body>
+
+</html>
