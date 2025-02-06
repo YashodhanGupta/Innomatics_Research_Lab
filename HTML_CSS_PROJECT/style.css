@@ -1,0 +1,414 @@
+* {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+header {
+    background-color: #cf2e2e;
+    width: 100%;
+    height: 35.4px;
+    display: flex;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    align-items: center;
+    padding-left: 50px; 
+    position: fixed;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+    background-color:white ;
+}
+
+header .header {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+div span {
+    color: white;
+    font-weight: bold;
+    padding: 5px 12px; 
+}
+
+.hyd, .pune, .bengaluru {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 7px;
+    padding: 5px 10px; 
+    margin-left: 50px;
+}
+#innomatics_image{
+    width: 25vw;
+    margin-left: 80px;
+}
+.header_inno{
+    display: flex;
+    gap: 20px;
+    background-color: #F5F5F5;
+    height: 80px;
+    margin-top: 40px;
+    position: fixed;
+    width: 100%;
+
+}
+.header_inno #home{
+    margin-left: 80px;
+}
+.header_inno a{
+    text-decoration: none;
+    color: black;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.header_inno button{
+    width: 120px;
+    height: 40px;
+    margin-top: 10px;
+    color: white;
+    background-color: black;
+    margin-left: 80px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.image_png img{
+    height: 60vh;
+    width: 100%;
+}
+.AboutUs {
+    max-width: 100%;         
+    width: 37vw;            
+    margin-left: 70px;          
+}
+
+.AboutUs p {
+    text-align: justify;   
+   
+}
+.about, .symbol{
+    display: flex;
+    background-color: white;
+    margin-bottom: 30px;
+}
+.symbol {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 120px;
+}
+
+.symbol h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px; 
+}
+
+.symbol-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 60px; 
+    max-width: 800px;
+    
+}
+
+.card {
+    width: 30%;
+    padding:30px 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: 150px;
+}
+
+
+.course {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    padding-top: 30px; 
+    background-color: black;
+    color: white;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; 
+    align-items: stretch;  
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.card_course {
+    width: 20%;
+    height: 500px;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: black;
+    color: white;
+}
+
+.card-img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    min-height: 50px; 
+}
+
+.card-content p {
+    font-size: 16px;
+    flex-grow: 1;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-content button {
+    padding: 12px 20px;  
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;  
+    width: 50%;  
+    margin: 10px auto;  
+    
+   
+}
+.advantages{
+    display: flex;
+    
+    background-color: #EDEDED;
+}
+.advantages .video{
+    margin-left:3%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.advantages ul{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding:10px 120px 10px 20px;
+    font-size: 17px;
+}
+.advantages .training{
+    margin-left: 10%;
+}
+.advantages iframe{
+    border-radius: 20px;
+    margin-top: 7px;
+}
+.advantages .video button{
+    border-radius: 6px;
+    margin-top: 15px;
+    margin-left: 30%;
+    background-color: white;
+    border: 2px solid red;
+    font-size: 20px;
+    padding: 6px 20px 11px;
+    
+}
+
+.choose{
+    display: flex;
+    margin: 30px;
+}
+.chooseUs button{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-size: 15px;
+    height: 35px;
+    margin: 10px 7px;
+    padding: 0px 30px;
+    
+
+}
+.train{
+    border: 1px solid black;
+    width: 60%;
+    border-radius: 50px;
+}
+.expert{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+}
+
+.review div {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    border: 1px solid black;
+    height: 70%;
+    margin: 10px 10%;
+    padding: 10px; 
+    width: 80%; 
+    border-radius: 30px;
+}
+.review p{
+    padding: 0px 200px;
+    font-size: 14px;
+}
+.card_course_new {
+    width: 20%;  
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid black;
+}
+
+.card-img_new {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
+.card_course_new_2 {
+    width: 20%;
+    height: 400px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    border: 1px solid #ccc;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+}
+.location {
+    display: flex;
+    justify-content: space-between; 
+    padding: 20px; 
+}
+
+.location div {
+    flex: 1; 
+    padding: 0 20px; 
+}
+
+.location div:first-child {
+    justify-content: flex-start; 
+}
+
+.location div h4 {
+    margin-bottom: 10px;
+}
+
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.custom-list li {
+    list-style-type: none;  
+    position: relative;     
+    margin-bottom: 10px;    
+}
+.custom-list li p {
+    margin: 0; 
+}
+.custom-list li:nth-child(1)::before,
+.custom-list li:nth-child(2)::before,
+.custom-list li:nth-child(3)::before {
+    content: "\f3c5"; 
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+    position: absolute; 
+    left: -25px; 
+    top: 0;
+    color: red; 
+}
+
+
+
+.custom-list li:nth-child(4)::before {
+    content: "\f095";
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+    position: absolute;
+    left: -20px;
+    top: 0;
+    color: red;
+}
+
+.custom-list li:nth-child(5)::before {
+    content: "\f0e0"; 
+    font-family: 'Font Awesome 5 Free'; 
+    font-weight: 900; 
+    position: absolute;
+    left: -20px;
+    top: 0;
+    color: red;
+}
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    width: 20px;
+    height: 20px;
+    padding:5px 5px;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    height: 20px;
+    padding:5px 5px;
+  }
+  
+  
+  
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    height: 20px;
+    padding:5px 5px;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+    height: 20px;
+    padding:5px 5px;
+  }
+  .fa-instagram {
+    background: #125688;
+    color: white;
+    height: 20px;
+    padding:5px 5px;
+  }
+  
+  
