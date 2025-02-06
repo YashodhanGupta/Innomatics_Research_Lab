@@ -426,4 +426,49 @@ div span {
     height: auto;
     max-width: 100%;
   }
-  
+  .header_inno a:nth-child(n+2):nth-child(-n+7):hover{
+    background-color: #cf2e2e;
+    height: 29px;
+    color: white;
+    padding: 4px 4px;
+  }
+ .scholars{
+    display: flex;
+    justify-content: space-evenly;
+ }
+
+.scholars div { 
+    text-align: justify; /* Justifies the text inside each div */
+    width: 75%; /* Ensures each div has enough space */
+}
+.scholars .input input{
+    margin-bottom: 15px;
+    border: 1px solid black;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+.input-border{
+    border: 1px solid black;
+    
+    height: 70%;
+}
+.input{
+    margin-left: 100px;
+}
+.program{
+    margin-left: 120px;
+}
+
+.faq p{
+    border: 1px solid black;
+    width: 40%;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    text-align: left;
+   
+    
+    padding: 10px 10px;
+}
+
