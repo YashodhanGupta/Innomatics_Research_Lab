@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculation</title>
+    <link rel="stylesheet" href="electric.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Electricity Bill Calculator</h1>
+
+        <label for="units">Enter Units Consumed:</label>
+        <input type="number" id="units" min="0" required>
+
+        <label for="timeOfDay">Enter Time of Consumption (24-hour format):</label>
+        <input type="number" id="timeOfDay" min="0" max="23" required>
+
+        <button type="button" onclick="displayBill()">Calculate Bill</button>
+
+        <div id="totalBill">
+            <p>Your total bill will appear here.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
