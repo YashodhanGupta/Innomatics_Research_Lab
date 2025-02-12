@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Clock Center</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1642509606298-278311902bed?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTQyfHx3YWxsJTIwY2xvY2t8ZW58MHx8MHx8fDA%3D') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            backdrop-filter: blur(5px);
+        }
+
+        
+        h1 {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 32px;
+            text-transform: uppercase;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+       
+        .timebox {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+            width: 200px;
+            text-align: center;
+        }
+
+        
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>World Clock Center</h1>
+    <div class="container">
+        <div class="timebox">
+            <h2>India</h2>
+            <p id="india"></p>
+        </div>
+        <div class="timebox">
+            <h2>Paris</h2>
+            <p id="paris"></p>
+        </div>
+        <div class="timebox">
+            <h2>Germany</h2>
+            <p id="germany"></p>
+        </div>
+        <div class="timebox">
+            <h2>London</h2>
+            <p id="london"></p>
+        </div>
+        <div class="timebox">
+            <h2>New York</h2>
+            <p id="newyork"></p>
+        </div>
+        <div class="timebox">
+            <h2>Tokyo</h2>
+            <p id="tokyo"></p>
+        </div>
+        <div class="timebox">
+            <h2>Beijing</h2>
+            <p id="beijing"></p>
+        </div>
+        <div class="timebox">
+            <h2>Sydney</h2>
+            <p id="sydney"></p>
+        </div>
+        <div class="timebox">
+            <h2>Los Angeles</h2>
+            <p id="losangeles"></p>
+        </div>
+        <div class="timebox">
+            <h2>Dubai</h2>
+            <p id="dubai"></p>
+        </div>
+    </div>
+
+    <script>
+        function updateTime() {
+            const options = { 
+                weekday: "long", 
+                day: "2-digit", 
+                month: "long", 
+                year: "numeric", 
+                hour: "2-digit", 
+                minute: "2-digit", 
+                second: "2-digit", 
+                hourCycle: "h12" 
+            };
+
+            document.getElementById("india").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Asia/Kolkata" });
+            document.getElementById("paris").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Europe/Paris" });
+            document.getElementById("germany").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Europe/Berlin" });
+            document.getElementById("london").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Europe/London" });
+            document.getElementById("newyork").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "America/New_York" });
+            document.getElementById("tokyo").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Asia/Tokyo" });
+            document.getElementById("beijing").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Asia/Shanghai" });
+            document.getElementById("sydney").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Australia/Sydney" });
+            document.getElementById("losangeles").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "America/Los_Angeles" });
+            document.getElementById("dubai").innerHTML = new Date().toLocaleString("en-US", { ...options, timeZone: "Asia/Dubai" });
+        }
+
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
