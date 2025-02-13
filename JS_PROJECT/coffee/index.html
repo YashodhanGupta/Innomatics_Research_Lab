@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasho Brews - Order Summary</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <header><h1>Yasho Brews - <i>Start your day with a cup of warmth, where every sip feels like a hug in a mug.</i></h1>
+    
+    
+    <div class="card-container">
+        <div class="card gold-card" id="goldCard" onclick="highlightCard('goldCard')">
+            Gold Member
+        </div>
+        <div class="card silver-card" id="silverCard" onclick="highlightCard('silverCard')">
+            Silver Member
+        </div>
+        <div class="card regular-card" id="regularCard" onclick="highlightCard('regularCard')">
+            Regular Member
+        </div>
+    </div>
+</header>
+    <div id="options" class="option-container">
+        <label for="coffeeType">Select Coffee Type:</label>
+        <select id="coffeeType" class="select-options">
+            <option value="Lattee">Lattee</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Mocha">Mocha</option>
+
+            <option value="Americano">Americano</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Macchiato">Macchiato</option>
+            <option value="Iced Coffee">Iced Coffee</option>
+        </select>
+        <label for="coffeeSize">Select Coffee Size:</label>
+        <select id="coffeeSize" class="select-options">
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" value="1">
+        <label for="add-ons">Add-Ons:</label>
+        <input type="checkbox" id="whippedCream">Whipped Cream ($0.75)<br>
+        <input type="checkbox" id="extraShot">ExtraShot ($1)<br>
+
+        <input type="checkbox" id="Chocolate Shavings">Chocolate Shavings ($0.1)<br>
+        <input type="checkbox" id="Caramel Drizzle">Caramel Drizzle ($0.6)<br>
+
+
+        <input type="checkbox" id="syrup">Syrup ($0.5)<br> <br>
+        <label for="promo">Promo Code:</label>
+        <input type="text" id="promo" placeholder="Enter Promo Code"><br>
+        <button id="calculateButton" onclick="calculateTotal()">Calculate</button>
+
+    </div>
+
+    <div class="order-summary" id="orderSummary">
+        <h3>Order Summary</h3>
+        <div class="summary-item">
+            <span>Coffee Type:</span>
+            <span class="value" id="summaryCoffeeType">Lattee</span>
+        </div>
+        <div class="summary-item">
+            <span>Coffee Size:</span>
+            <span class="value" id="summaryCoffeeSize">Medium</span>
+        </div>
+        <div class="summary-item">
+            <span>Quantity:</span>
+            <span class="value" id="summaryQuantity">1</span>
+        </div>
+        <div class="summary-item">
+            <span>Whipped Cream:</span>
+            <span class="value" id="summaryWhippedCream">No</span>
+        </div>
+        <div class="summary-item">
+            <span>Extra Shot:</span>
+            <span class="value" id="summaryExtraShot">No</span>
+        </div>
+        <div class="summary-item">
+            <span>Chocolate Shavings:</span>
+            <span class="value" id="summaryChocolateShavings">No</span>
+        </div>
+
+        <div class="summary-item">
+            <span>Caramel Drizzle:</span>
+            <span class="value" id="summaryCaramelDrizzle">No</span>
+        </div>
+        <div class="summary-item">
+            <span>Syrup:</span>
+            <span class="value" id="summarySyrup">No</span>
+        </div>
+
+        <div class="summary-item">
+            <span>Promo Code:</span>
+            <span class="value" id="summaryPromoCode">None</span>
+        </div>
+        <div class="summary-item">
+            <span>Sub Total:</span>
+            <span class="value" id="summarySubTotal">None</span>
+        </div>
+        <div class="summary-item">
+            <span>Tax:</span>
+            <span class="value" id="summaryTax">$0.00</span>
+        </div>
+        <div class="summary-item">
+            <span>Discount:</span>
+            <span class="value" id="summaryDiscount">$0.00</span>
+        </div>
+        <div class="summary-item">
+            <span>Total Price:</span>
+            <span class="value" id="summaryTotalPrice">$0.00</span>
+        </div>
+        <button class="invoice-btn" onclick="downloadInvoice()">Download Invoice</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
