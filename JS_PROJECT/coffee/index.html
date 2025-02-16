@@ -25,6 +25,8 @@
     </div>
 </header>
     <div id="options" class="option-container">
+        <label for="userName">Enter Your Name:</label>
+<input type="text" id="userName" placeholder="Enter your name" required><br>
         <label for="coffeeType">Select Coffee Type:</label>
         <select id="coffeeType" class="select-options">
             <option value="Lattee">Lattee</option>
@@ -61,6 +63,10 @@
 
     <div class="order-summary" id="orderSummary">
         <h3>Order Summary</h3>
+        <div class="summary-item">
+            <span>Customer's Name:</span>
+            <span class="value" id="summaryCustomerName"></span>
+        </div>
         <div class="summary-item">
             <span>Coffee Type:</span>
             <span class="value" id="summaryCoffeeType">Lattee</span>

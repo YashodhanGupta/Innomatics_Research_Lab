@@ -18,6 +18,11 @@ function highlightCard(cardId) {
 
 function calculateTotal() {
     // Get values from form
+    const userName = document.getElementById('userName').value.trim();
+    if (!userName) {
+        alert('Please enter your name.');
+        return;
+    }
     const coffeeType = document.getElementById('coffeeType').value;
     const coffeeSize = document.getElementById('coffeeSize').value;
     const quantity = parseInt(document.getElementById('quantity').value, 10);
@@ -79,6 +84,7 @@ function calculateTotal() {
     if (promoCode === 'DISCOUNT10') totalPrice *= 0.9; // Apply promo code if valid
 
     // Display the summary
+    document.getElementById('summaryCustomerName').textContent = userName;
     document.getElementById('summaryCoffeeType').textContent = coffeeType;
     document.getElementById('summaryCoffeeSize').textContent = coffeeSize;
     document.getElementById('summaryQuantity').textContent = quantity;
@@ -118,6 +124,14 @@ function downloadInvoice() {
         doc.setTextColor(255, 0, 0); // Red color for heading
         doc.text('Coffee Order Receipt', 105, 30, null, null, 'center'); // Centered heading
 
+        const now = new Date();
+        const date = now.toLocaleDateString('en-GB'); // dd/mm/yyyy
+        const time = now.toLocaleTimeString('en-US', { hour12: false }); // HH:MM:SS
+
+        doc.setFontSize(12);
+        doc.setTextColor(0, 0, 0);
+        doc.text(`Date: ${date} | Time: ${time}`, 105, 40, { align: 'center' });
+
         // Reset text styles for order details
         doc.setFontSize(14);
         doc.setTextColor(0, 0, 0); // Black color
@@ -134,6 +148,7 @@ function downloadInvoice() {
             yPosition += 10; // Move Y position down for next line
         }
 
+        addDetail('Customer Name', document.getElementById('summaryCustomerName').textContent);
         addDetail('Coffee Type', document.getElementById('summaryCoffeeType').textContent);
         addDetail('Coffee Size', document.getElementById('summaryCoffeeSize').textContent);
         addDetail('Quantity', document.getElementById('summaryQuantity').textContent);
@@ -148,6 +163,11 @@ function downloadInvoice() {
         addDetail('Sub Total', document.getElementById('summarySubTotal').textContent);
         addDetail('Tax', document.getElementById('summaryTax').textContent);
         addDetail('Discount', document.getElementById('summaryDiscount').textContent);
+        yPosition += 3;
+        doc.setDrawColor(0);
+        doc.setLineWidth(0.5);
+        doc.line(60, yPosition, 150, yPosition); // Horizontal line
+        yPosition += 10;
         addDetail('Total Price', document.getElementById('summaryTotalPrice').textContent);
 
         // Thank You Message
