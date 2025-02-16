@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game Selection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff6b6b, #f7d794);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            cursor: pointer;
+            flex-direction: column;
+        }
+        .game-selection {
+            text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .game-selection h1 {
+            color: #fff;
+            margin-bottom: 30px;
+        }
+        .game-btn {
+            margin: 20px;
+            padding: 20px 40px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background: #2f3542;
+            color: #fff;
+            transition: transform 0.3s;
+        }
+        .game-btn:hover {
+            transform: scale(1.1);
+        }
+        .emoji {
+            position: absolute;
+            font-size: 1.2em;
+            pointer-events: none;
+            animation: floatUp 5s forwards;
+            opacity: 1;
+        }
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #2f3542;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-selection">
+        <h1>Select a Memory Game</h1>
+        <button class="game-btn" onclick="startGame('game1')">Emoji Memory Game</button>
+        <button class="game-btn" onclick="startGame('game2')">Food Memory Game</button>
+    </div>
+
+    <footer>
+        &copy; 2025 Memory Game Inc. All rights reserved by Yashodhan Gupta.
+    </footer>
+
+    <script>
+        function startGame(game) {
+            if (game === 'game1') {
+                alert(`Starting ${game}`);
+                window.location.href = 'emoji.html';
+            } else {
+                alert(`Starting ${game}`);
+                window.location.href = 'food.html';
+            }
+        }
+
+        const emojis = ['💖','💛','💚','💙','💜','❤️','🧡'];
+        let lastX = 0;
+        let lastY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            const distance = Math.sqrt((e.pageX - lastX) ** 2 + (e.pageY - lastY) ** 2);
+            if (distance > 50) { // Trigger only if cursor moved more than 50px
+                lastX = e.pageX;
+                lastY = e.pageY;
+                const emoji = document.createElement('div');
+                emoji.className = 'emoji';
+                emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                emoji.style.left = `${e.pageX}px`;
+                emoji.style.top = `${e.pageY}px`;
+                emoji.style.color = `hsl(${Math.random() * 360}, 100%, 60%)`;
+                document.body.appendChild(emoji);
+                setTimeout(() => emoji.remove(), 5000);
+            }
+        });
+    </script>
+</body>
+</html>
