@@ -1,0 +1,373 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #1e1e2e; /* Dark background */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* Container */
+.todo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.todo-container {
+  background: #282a36; /* Dark gray container */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+/* Title */
+h2 {
+  color: #50fa7b;
+  margin-bottom: 15px;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.search-bar {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  width: 80%;
+}
+
+.search-icon {
+  margin-left: -25px;
+}
+
+/* Input Box */
+.input-container {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Add Button */
+button {
+  background: #50fa7b;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #40d469;
+}
+
+/* Task List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+/* Task Item */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #44475a;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* Completed Task */
+.completed {
+  background-color: lightgreen !important;
+  color: darkgreen !important;
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+/* Buttons */
+.task-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.toggle-dark-mode {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+/* Task List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+/* Task Item */
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f1f1;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  transition: 0.3s;
+  word-wrap: break-word; /* Break long words */
+  overflow-wrap: break-word; /* Ensure text wraps inside */
+}
+
+
+/* Task text should wrap properly */
+.task-item span {
+  max-width: 50%; /* Prevent text from taking full width */
+  white-space: pre-wrap; /* Preserve spaces and allow wrapping */
+  word-wrap: break-word; /* Ensure breaking of long words */
+  overflow-wrap: break-word; /* Prevent overflow */
+}
+/* Light Mode (default) */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e2e;
+  color: white;
+}
+
+/* Todo Container */
+.todo-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+/* Dark Mode for Todo Container */
+.dark-mode .todo-container {
+  background: #282a36;
+}
+
+/* Input Fields */
+.input-container input,
+.search-container input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Dark Mode Input Fields */
+.dark-mode .input-container input,
+.dark-mode .search-container input {
+  background: #444;
+  color: white;
+  border: 1px solid #777;
+}
+
+/* Add Task and Search Bar */
+.input-container, .search-container {
+  margin: 10px 0;
+}
+
+/* Dark Mode Button */
+.toggle-dark-mode {
+  background: #50fa7b;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.toggle-dark-mode:hover {
+  background: #40d469;
+}
+/* Light Mode (default) */
+body.light-mode {
+  background-color: #f8f9fa;
+  color: black;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #1e1e2e;
+  color: white;
+}
+
+/* Todo Container */
+.todo-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 400px;
+  text-align: center;
+}
+
+/* Dark Mode for Todo Container */
+.dark-mode .todo-container {
+  background: #282a36;
+}
+
+/* Input Fields */
+.input-container input,
+.search-container input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Dark Mode Input Fields */
+.dark-mode .input-container input,
+.dark-mode .search-container input {
+  background: #444;
+  color: white;
+  border: 1px solid #777;
+}
+
+/* Add Task and Search Bar */
+.input-container, .search-container {
+  margin: 10px 0;
+}
+
+/* Toggle Switch Container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.mode-text {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 17px;
+  width: 17px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: black;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Task List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+.dark-mode .task-item {
+  background: #444;
+}
+
+.task-text {
+  flex: 1;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.delete-btn {
+  background: rgb(151, 16, 16);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
