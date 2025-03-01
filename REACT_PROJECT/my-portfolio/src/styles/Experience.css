@@ -1,0 +1,60 @@
+.timeline-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd; /* Optional border */
+  }
+  
+  .main-badge {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .experience-badge {
+    background-color: #6c757d;
+    color: white;
+  }
+  .vertical-timeline::before {
+    background: #FFA203 !important; /* Change to blue or any visible color */
+  }
+  .tech-badge {
+    display: inline-block;
+    background-color: #FFA203; /* Blue button-like color */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px; /* Rounded look */
+    margin: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .tech-badge:hover {
+    background-color: #FE691E; /* Darker blue on hover */
+  }
+  .rotating-hourglass {
+    font-size: 30px;
+    color: #FE691E  ;
+    animation: rotateHourglass 6s ease-in-out infinite;
+  }
+  
+  @keyframes rotateHourglass {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    50.01% {
+      transform: rotate(180deg);
+    }
+    
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+      
+  
