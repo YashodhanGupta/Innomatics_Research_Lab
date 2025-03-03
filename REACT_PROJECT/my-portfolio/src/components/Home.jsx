@@ -57,7 +57,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* About Section Below (Without Stars) */}
+      
       <About />
       <Projects />
       <Skills />
