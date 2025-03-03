@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import "../styles/Header.css";
 
 const Header = () => {
@@ -16,15 +17,17 @@ const Header = () => {
   return (
     <header className={`header ${!isScrolled ? "transparent" : "black-bg"}`}>
       <div className="logo">
-        <a href="#home">My Portfolio</a> {/* This link will scroll to the #home section */}
+        <Link to="home" smooth={true} duration={500} offset={-70}>
+          My Portfolio
+        </Link>
       </div>
       <ul className="nav-links">
-        <li><a href="#home">Home</a></li> {/* Ensure this points to the correct section */}
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link to="home" smooth={true} duration={500} offset={-70}>Home</Link></li>
+        <li><Link to="about" smooth={true} duration={500} offset={-70}>About Me</Link></li>
+        <li><Link to="projects" smooth={true} duration={500} offset={-70}>Projects</Link></li>
+        <li><Link to="skills" smooth={true} duration={500} offset={-70}>Skills</Link></li>
+        <li><Link to="experience" smooth={true} duration={500} offset={-70}>Experience</Link></li>
+        <li><Link to="contact" smooth={true} duration={500} offset={-70}>Contact</Link></li>
       </ul>
     </header>
   );
