@@ -10,6 +10,8 @@ function App() {
   const [isFacingDown, setIsFacingDown] = useState(true); // Initially downward
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
+  
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");

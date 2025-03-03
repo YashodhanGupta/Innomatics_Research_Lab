@@ -1,8 +1,15 @@
 .rocket {
   position: fixed;
   right: 50px;
-  width: 80px;
+  width: 60px; /* Reduced size */
   cursor: pointer; /* Clickable */
-  transition: top 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out;
   z-index: 1000;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8)); /* Glow effect */
 }
+
+/* 🚀 Glow Effect on Hover */
+.rocket:hover {
+  filter: drop-shadow(0 0 15px rgba(255, 165, 0, 1)); /* Stronger glow */
+}
+
