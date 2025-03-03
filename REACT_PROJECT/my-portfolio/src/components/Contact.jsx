@@ -3,7 +3,7 @@ import "../styles/Contact.css";
 
 const Contact = () => {
   useEffect(() => {
-    // Check if script already exists to prevent duplicate loading
+  
     if (!document.querySelector('script[src="https://static-bundles.visme.co/forms/vismeforms-embed.js"]')) {
       const script = document.createElement("script");
       script.src = "https://static-bundles.visme.co/forms/vismeforms-embed.js";
@@ -25,8 +25,8 @@ const Contact = () => {
   style={{
     padding: "50px 0",
     textAlign: "center",
-    backgroundColor: "transparent", // Forces no background
-    color: "#333", // Adjust text color for better visibility
+    backgroundColor: "transparent",
+    color: "#333",
   }}
 >
       <h2 style={{ fontSize: "28px", fontWeight: "bold", color: "#333" }}>Contact Me</h2>
