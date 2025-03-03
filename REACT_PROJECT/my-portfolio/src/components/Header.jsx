@@ -6,7 +6,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Change background after scrolling 50px
+      setIsScrolled(window.scrollY > 50); 
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -16,10 +16,10 @@ const Header = () => {
   return (
     <header className={`header ${!isScrolled ? "transparent" : "black-bg"}`}>
       <div className="logo">
-        <a href="#home">My Portfolio</a> {/* This link will scroll to the #home section */}
+        <a href="#home">My Portfolio</a>
       </div>
       <ul className="nav-links">
-        <li><a href="#home">Home</a></li> {/* Ensure this points to the correct section */}
+        <li><a href="#home">Home</a></li> 
         <li><a href="#about">About Me</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
