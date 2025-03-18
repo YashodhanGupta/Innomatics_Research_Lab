@@ -27,7 +27,7 @@ const PatientDashboard = () => {
     useEffect(() => {
         const fetchDoctors = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/api/doctors");
+                const response = await axios.get("https://health-backend-3zzb.onrender.com/api/doctors");
                 setDoctors(response.data);
             } catch (error) {
                 console.error("Failed to fetch doctors:", error);
@@ -41,7 +41,7 @@ const PatientDashboard = () => {
     const fetchAppointments = async () => {
         try {
             console.log("Fetching appointments...");
-            const response = await axios.get(`http://localhost:5000/api/appointments/${userEmail}`);
+            const response = await axios.get(`https://health-backend-3zzb.onrender.com/api/appointments/${userEmail}`);
             console.log("Response Data:", response.data);
 
             if (response.data.length === 0) {
@@ -52,17 +52,17 @@ const PatientDashboard = () => {
             setShowAppointments(true);
         } catch (error) {
             console.error("Error fetching appointments:", error);
-            alert("Failed to fetch appointments. Please try again.");
+            alert("You don't have any appointments.");
         }
     };
 
     // Cancel an appointment
     const cancelAppointment = async (appointmentId) => {
         try {
-            const response = await axios.delete(`http://localhost:5000/api/appointments/${appointmentId}`);
+            const response = await axios.delete(`https://health-backend-3zzb.onrender.com/api/appointments/${appointmentId}`);
     
             if (response.status === 200) {
-                alert("Appointment canceled successfully!");
+                alert("Appointment cancelled successfully!");
     
                 // Update UI by filtering out deleted appointment
                 setAppointments((prevAppointments) =>

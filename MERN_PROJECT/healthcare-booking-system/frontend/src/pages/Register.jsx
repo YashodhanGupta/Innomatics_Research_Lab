@@ -5,11 +5,12 @@ import "../styles/Register.css"; // Import the CSS file
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: "", // Added name field
+    name: "",
     email: "",
     password: "",
     role: "patient",
   });
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -28,10 +29,13 @@ const Register = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/register", formData);
+      const res = await axios.post("https://health-backend-3zzb.onrender.com/api/auth/register", formData);
       console.log("Register Response:", res.data);
 
-      alert("Registration successful!");
+      // Show popup
+      alert("Registration successful! Please login again.");
+
+      // Redirect to login page
       navigate("/login");
 
     } catch (error) {
@@ -47,7 +51,7 @@ const Register = () => {
         <h2>Register</h2>
         {error && <p className="error">{error}</p>}
 
-        {/* Role Selection (Patient and Doctor options only) */}
+        {/* Role Selection */}
         <div className="role-card">
           <div
             className={`role-option ${formData.role === "doctor" ? "selected" : ""}`}

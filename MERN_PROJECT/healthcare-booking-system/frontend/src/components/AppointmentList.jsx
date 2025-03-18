@@ -5,15 +5,15 @@ const AppointmentList = () => {
   const [appointments, setAppointments] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/appointments")
+    axios.get("https://health-backend-3zzb.onrender.com/api/appointments")
       .then((res) => setAppointments(res.data))
       .catch((err) => console.error(err));
   }, []);
 
   const cancelAppointment = (id) => {
-    axios.delete(`http://localhost:5000/api/appointments/${id}`)
+    axios.delete(`https://health-backend-3zzb.onrender.com/api/appointments/${id}`)
       .then(() => {
-        alert("Appointment canceled successfully!");
+        alert("Appointment cancelled successfully!");
         setAppointments(appointments.filter((appt) => appt._id !== id));
       })
       .catch((err) => console.error(err));

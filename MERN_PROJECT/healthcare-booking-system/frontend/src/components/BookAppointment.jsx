@@ -22,7 +22,7 @@ const BookAppointment = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/api/appointments", {
+            await axios.post("https://health-backend-3zzb.onrender.com/api/appointments", {
                 doctorId,
                 time,
                 ...formData,
@@ -35,7 +35,7 @@ const BookAppointment = () => {
                 icon: "success",
                 confirmButtonText: "OK",
             }).then(() => {
-                navigate("/"); // ✅ Redirect to dashboard after clicking OK
+                navigate("/patient-dashboard"); // ✅ Redirect to dashboard after clicking OK
             });
 
         } catch (error) {
