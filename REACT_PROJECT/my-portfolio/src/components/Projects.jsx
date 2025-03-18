@@ -45,6 +45,13 @@ const projectData = [
     languages: "PYTHON, MACHINE LEARNING, ARTIFICIAL INTELLIGENCE",
     link: "https://final-year-project-7z5p.onrender.com/", // Add your external link
   },
+  {
+    id: 7,
+    title: "TailCare Pets Hospital",
+    image: "/dog.jpg",
+    languages: "MongoDB, ExpressJS, ReactJS, NodeJS",
+    link: "https://pets-healthcare.netlify.app/", // Add your external link
+  },
 ];
 
 const Projects = () => {
